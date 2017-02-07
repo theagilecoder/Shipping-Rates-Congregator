@@ -11,19 +11,17 @@ This is an attempt in Ruby on Rails 5 to gather Shipping Rates from Carriers aro
   - [Shipwire](https://www.shipwire.com/w/developers/)
   - [Australia Post](https://developers.auspost.com.au/)
 
-If you have time and patience to integrate each carrier indivisually then click above and read up on their documentations.
+If you have the time and patience to integrate each carrier individually then click above and read up on their documentation.
 
 
-> I haven't designed any UI or API endpoints so currently Rails Console is the only way to **"Talk"**
+> I haven't designed any UI or API endpoints so currently **Rails Console** is the only way to **"Talk"**
 > to Carrier APIs and do stuff like Address Validation, fetching shipping rates, tracking
 > shipments etc.
-
-This text you see here is *actually* written in Markdown! To get a feel for Markdown's syntax, type some text into the left window and watch the results in the right.
 
 
 ### Example - Get international rates for cylindrical package from UPS 
 
-Initialize your package with weight, dimensions. Note that all carriers use dimensional weight and hence cylindrical vs. cubic calculation are different.
+Fire up Rails console and initialize your package with weight, dimensions. Note that all carriers use dimensional weight and hence cylindrical vs. cubic calculation are different.
 
 ```sh
 $ packages = ActiveShipping::Package.new(100, [93,10], cylinder: true)
